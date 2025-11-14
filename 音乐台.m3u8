@@ -3,27 +3,34 @@
 #EXT-X-TARGETDURATION:220
 #EXT-X-MEDIA-SEQUENCE:0
 #EXT-X-ALLOW-CACHE:NO（禁用缓存，防切换中断）
+#EXT-X-PLAYLIST-TYPE:VOD（标记为点播列表，优化切换逻辑）
 
 # 第一首：我想，我想（迷彩版）
 #EXTINF:210,我想，我想（迷彩版）
 https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/d/98/e72b9cea-7fb3-4c5c-826c-93892e8ee0cb.aac
 
-# 第二首：将想念藏进风里
+# 切换第二首：添加DISCONTINUITY避免从头播放
+#EXT-X-DISCONTINUITY
 #EXTINF:214,将想念藏进风里
 https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/0/6a/8c7a1cc7-237c-4e73-8244-c00b13ce5459.aac
 
-# 第三首：白军装里的海与梦
+# 切换第三首：同上
+#EXT-X-DISCONTINUITY
 #EXTINF:153,白军装里的海与梦
 https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/8/f9/edc5c41d-ebce-4382-a2ad-414392288174.aac
 
-# 循环段：按新顺序重复，无缝循环无中断
+# 循环段：按顺序无缝衔接，无从头播放
+#EXT-X-DISCONTINUITY
 #EXTINF:210,我想，我想（迷彩版）（循环）
 https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/d/98/e72b9cea-7fb3-4c5c-826c-93892e8ee0cb.aac
 
+#EXT-X-DISCONTINUITY
 #EXTINF:214,将想念藏进风里（循环）
 https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/0/6a/8c7a1cc7-237c-4e73-8244-c00b13ce5459.aac
 
+#EXT-X-DISCONTINUITY
 #EXTINF:153,白军装里的海与梦（循环）
 https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/8/f9/edc5c41d-ebce-4382-a2ad-414392288174.aac
 
+# 无限循环扩展：如需更长循环，可按“DISCONTINUITY+歌曲”格式重复追加
 #EXT-X-ENDLIST
