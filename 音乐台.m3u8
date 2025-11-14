@@ -1,14 +1,23 @@
 #EXTM3U
 #EXT-X-VERSION:3
-#EXT-X-TARGETDURATION:220（按最长音频时长设置，避免播放中断）
-#EXT-X-LOOP:1（强制无限循环，删除则仅播放一次）
+#EXT-X-TARGETDURATION:220
 #EXT-X-MEDIA-SEQUENCE:0
+#EXT-X-ALLOW-CACHE:NO（禁用缓存，适配直播源实时切换）
 
-#EXTINF:205,将想念藏进风里
-https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/0/6a/8c7a1cc7-237c-4e73-8244-c00b13ce5459.aac
-
-#EXTINF:210,白军装里的海与梦
+# 第一首：白军装里的海与梦（AAC直播源）
+#EXTINF:153,白军装里的海与梦
 https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/8/f9/edc5c41d-ebce-4382-a2ad-414392288174.aac
 
+# 第二首：将想念藏进风里（AAC直播源）
+#EXTINF:214,将想念藏进风里
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/0/6a/8c7a1cc7-237c-4e73-8244-c00b13ce5459.aac
 
+# 循环标记：通过重复地址实现无缝切换防中断
+#EXTINF:153,白军装里的海与梦（循环）
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/8/f9/edc5c41d-ebce-4382-a2ad-414392288174.aac
+
+#EXTINF:214,将想念藏进风里（循环）
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/0/6a/8c7a1cc7-237c-4e73-8244-c00b13ce5459.aac
+
+# 无限循环扩展（如需更长循环，可复制上述两段地址重复添加）
 #EXT-X-ENDLIST
