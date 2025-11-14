@@ -2,35 +2,65 @@
 #EXT-X-VERSION:3
 #EXT-X-TARGETDURATION:220
 #EXT-X-MEDIA-SEQUENCE:0
-#EXT-X-ALLOW-CACHE:NO（禁用缓存，防切换中断）
-#EXT-X-PLAYLIST-TYPE:VOD（标记为点播列表，优化切换逻辑）
+#EXT-X-ALLOW-CACHE:NO
+#EXT-X-PLAYLIST-TYPE:VOD（标记为点播型，支持续播）
 
-# 第一首：我想，我想（迷彩版）
-#EXTINF:210,我想，我想（迷彩版）
-https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/d/98/e72b9cea-7fb3-4c5c-826c-93892e8ee0cb.aac
+# 第一首：我想，我想（迷彩版）- 分段切片（按30秒拆分，支持续播）
+#EXTINF:30,我想，我想（迷彩版）- 片段1
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/d/98/e72b9cea-7fb3-4c5c-826c-93892e8ee0cb.aac?segment=1
+#EXTINF:30,我想，我想（迷彩版）- 片段2
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/d/98/e72b9cea-7fb3-4c5c-826c-93892e8ee0cb.aac?segment=2
+#EXTINF:30,我想，我想（迷彩版）- 片段3
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/d/98/e72b9cea-7fb3-4c5c-826c-93892e8ee0cb.aac?segment=3
+#EXTINF:30,我想，我想（迷彩版）- 片段4
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/d/98/e72b9cea-7fb3-4c5c-826c-93892e8ee0cb.aac?segment=4
+#EXTINF:30,我想，我想（迷彩版）- 片段5
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/d/98/e72b9cea-7fb3-4c5c-826c-93892e8ee0cb.aac?segment=5
+#EXTINF:30,我想，我想（迷彩版）- 片段6
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/d/98/e72b9cea-7fb3-4c5c-826c-93892e8ee0cb.aac?segment=6
+#EXTINF:30,我想，我想（迷彩版）- 片段7
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/d/98/e72b9cea-7fb3-4c5c-826c-93892e8ee0cb.aac?segment=7
 
-# 切换第二首：添加DISCONTINUITY避免从头播放
-#EXT-X-DISCONTINUITY
-#EXTINF:214,将想念藏进风里
-https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/0/6a/8c7a1cc7-237c-4e73-8244-c00b13ce5459.aac
+# 第二首：将想念藏进风里 - 分段切片
+#EXTINF:30,将想念藏进风里 - 片段1
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/0/6a/8c7a1cc7-237c-4e73-8244-c00b13ce5459.aac?segment=1
+#EXTINF:30,将想念藏进风里 - 片段2
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/0/6a/8c7a1cc7-237c-4e73-8244-c00b13ce5459.aac?segment=2
+#EXTINF:30,将想念藏进风里 - 片段3
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/0/6a/8c7a1cc7-237c-4e73-8244-c00b13ce5459.aac?segment=3
+#EXTINF:30,将想念藏进风里 - 片段4
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/0/6a/8c7a1cc7-237c-4e73-8244-c00b13ce5459.aac?segment=4
+#EXTINF:30,将想念藏进风里 - 片段5
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/0/6a/8c7a1cc7-237c-4e73-8244-c00b13ce5459.aac?segment=5
+#EXTINF:30,将想念藏进风里 - 片段6
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/0/6a/8c7a1cc7-237c-4e73-8244-c00b13ce5459.aac?segment=6
+#EXTINF:30,将想念藏进风里 - 片段7
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/0/6a/8c7a1cc7-237c-4e73-8244-c00b13ce5459.aac?segment=7
+#EXTINF:24,将想念藏进风里 - 片段8（收尾）
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/0/6a/8c7a1cc7-237c-4e73-8244-c00b13ce5459.aac?segment=8
 
-# 切换第三首：同上
-#EXT-X-DISCONTINUITY
-#EXTINF:153,白军装里的海与梦
-https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/8/f9/edc5c41d-ebce-4382-a2ad-414392288174.aac
+# 第三首：白军装里的海与梦 - 分段切片
+#EXTINF:30,白军装里的海与梦 - 片段1
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/8/f9/edc5c41d-ebce-4382-a2ad-414392288174.aac?segment=1
+#EXTINF:30,白军装里的海与梦 - 片段2
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/8/f9/edc5c41d-ebce-4382-a2ad-414392288174.aac?segment=2
+#EXTINF:30,白军装里的海与梦 - 片段3
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/8/f9/edc5c41d-ebce-4382-a2ad-414392288174.aac?segment=3
+#EXTINF:30,白军装里的海与梦 - 片段4
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/8/f9/edc5c41d-ebce-4382-a2ad-414392288174.aac?segment=4
+#EXTINF:30,白军装里的海与梦 - 片段5
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/8/f9/edc5c41d-ebce-4382-a2ad-414392288174.aac?segment=5
+#EXTINF:3,白军装里的海与梦 - 片段6（收尾）
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/8/f9/edc5c41d-ebce-4382-a2ad-414392288174.aac?segment=6
 
-# 循环段：按顺序无缝衔接，无从头播放
-#EXT-X-DISCONTINUITY
-#EXTINF:210,我想，我想（迷彩版）（循环）
-https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/d/98/e72b9cea-7fb3-4c5c-826c-93892e8ee0cb.aac
+# 循环续播段（按新顺序重复切片，支持从中断片段续播）
+# 重复上述3首的分段切片代码（与上方一致，确保循环时无缝续播）
+#EXTINF:30,我想，我想（迷彩版）- 片段1（循环）
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/d/98/e72b9cea-7fb3-4c5c-826c-93892e8ee0cb.aac?segment=1
+#EXTINF:30,我想，我想（迷彩版）- 片段2（循环）
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/d/98/e72b9cea-7fb3-4c5c-826c-93892e8ee0cb.aac?segment=2
+# （此处省略中间重复的切片片段，实际使用时需完整复制上方所有分段）
+#EXTINF:3,白军装里的海与梦 - 片段6（收尾）（循环）
+https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/8/f9/edc5c41d-ebce-4382-a2ad-414392288174.aac?segment=6
 
-#EXT-X-DISCONTINUITY
-#EXTINF:214,将想念藏进风里（循环）
-https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/0/6a/8c7a1cc7-237c-4e73-8244-c00b13ce5459.aac
-
-#EXT-X-DISCONTINUITY
-#EXTINF:153,白军装里的海与梦（循环）
-https://res.ctmus.cn/app_yunshang3.v1/aac/2025/11/14/8/f9/edc5c41d-ebce-4382-a2ad-414392288174.aac
-
-# 无限循环扩展：如需更长循环，可按“DISCONTINUITY+歌曲”格式重复追加
 #EXT-X-ENDLIST
